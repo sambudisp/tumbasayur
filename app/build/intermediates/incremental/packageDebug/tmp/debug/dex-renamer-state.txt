@@ -1,0 +1,4 @@
+#Tue Sep 10 09:50:46 WIB 2019
+base.0=/Users/beta/@sambudisp/AndroidProject/PrivateProject/Tumbasayur/app/build/intermediates/dex/debug/mergeDexDebug/out
+path.0=classes.dex
+renamed.0=classes.dex

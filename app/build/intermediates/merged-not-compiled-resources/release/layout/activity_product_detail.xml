@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_product_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProductDetailActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/col_product_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_col_product_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorLightGray">
+
+                <ImageView
+                    android:id="@+id/img_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="256dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_salad"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cl_bg_product_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="226dp"
+                    android:background="@drawable/bg_product_detail"
+                    android:paddingBottom="12dp"
+                    app:layout_constraintTop_toTopOf="@id/img_product">
+
+                    <TextView
+                        android:id="@+id/txt_title_product"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="18dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="@string/vegetable_name" />
+
+                    <TextView
+                        android:id="@+id/txt_price_product"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@id/txt_title_product"
+                        app:layout_constraintStart_toStartOf="@id/txt_title_product"
+                        app:layout_constraintTop_toBottomOf="@id/txt_title_product"
+                        tools:text="@string/price" />
+
+                    <TextView
+                        android:id="@+id/txt_count_product"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="end"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="@id/txt_price_product"
+                        app:layout_constraintStart_toStartOf="@id/txt_price_product"
+                        app:layout_constraintTop_toBottomOf="@id/txt_price_product"
+                        tools:text="Stok 2" />
+
+                    <View
+                        android:id="@+id/div_1"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="@id/txt_title_product"
+                        app:layout_constraintStart_toStartOf="@id/txt_title_product"
+                        app:layout_constraintTop_toBottomOf="@id/txt_count_product" />
+
+
+                    <TextView
+                        android:id="@+id/txt_desc_title_product"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/product_information"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@id/txt_title_product"
+                        app:layout_constraintStart_toStartOf="@id/txt_title_product"
+                        app:layout_constraintTop_toBottomOf="@id/div_1" />
+
+                    <TextView
+                        android:id="@+id/txt_desc_body_product_weight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/product_weight"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@id/txt_desc_title_product"
+                        app:layout_constraintStart_toStartOf="@id/txt_desc_title_product"
+                        app:layout_constraintTop_toBottomOf="@id/txt_desc_title_product" />
+
+
+                    <TextView
+                        android:id="@+id/txt_desc_body_product_min_order"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/product_min_order"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@id/txt_desc_title_product"
+                        app:layout_constraintStart_toStartOf="@id/txt_desc_title_product"
+                        app:layout_constraintTop_toBottomOf="@id/txt_desc_body_product_weight" />
+
+                    <TextView
+                        android:id="@+id/txt_desc_body_product_category"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/product_category"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@id/txt_desc_title_product"
+                        app:layout_constraintStart_toStartOf="@id/txt_desc_title_product"
+                        app:layout_constraintTop_toBottomOf="@id/txt_desc_body_product_min_order" />
+
+                    <TextView
+                        android:id="@+id/txt_desc_body_product_energy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/product_energy"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@id/txt_desc_title_product"
+                        app:layout_constraintStart_toStartOf="@id/txt_desc_title_product"
+                        app:layout_constraintTop_toBottomOf="@id/txt_desc_body_product_category" />
+
+                    <TextView
+                        android:id="@+id/txt_desc_body_product_fiber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/product_fiber"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@id/txt_desc_title_product"
+                        app:layout_constraintStart_toStartOf="@id/txt_desc_title_product"
+                        app:layout_constraintTop_toBottomOf="@id/txt_desc_body_product_energy" />
+
+                    <TextView
+                        android:id="@+id/txt_desc_body_product_vitamin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/product_vit"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@id/txt_desc_title_product"
+                        app:layout_constraintStart_toStartOf="@id/txt_desc_title_product"
+                        app:layout_constraintTop_toBottomOf="@id/txt_desc_body_product_fiber" />
+
+                    <View
+                        android:id="@+id/div_2"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@android:color/darker_gray"
+                        app:layout_constraintEnd_toEndOf="@id/txt_title_product"
+                        app:layout_constraintStart_toStartOf="@id/txt_title_product"
+                        app:layout_constraintTop_toBottomOf="@id/txt_desc_body_product_vitamin" />
+
+                    <TextView
+                        android:id="@+id/txt_desc_product_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/product_desc"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@id/txt_desc_title_product"
+                        app:layout_constraintStart_toStartOf="@id/txt_desc_title_product"
+                        app:layout_constraintTop_toBottomOf="@id/div_2" />
+
+                    <TextView
+                        android:id="@+id/txt_desc_product_body"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@id/txt_desc_title_product"
+                        app:layout_constraintStart_toStartOf="@id/txt_desc_title_product"
+                        app:layout_constraintTop_toBottomOf="@id/txt_desc_product_title"
+                        tools:text="@string/product_detail" />
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.constraint.ConstraintLayout>
+        </android.support.design.widget.CoordinatorLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>
